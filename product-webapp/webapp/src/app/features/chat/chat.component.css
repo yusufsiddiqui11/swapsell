@@ -1,0 +1,19 @@
+.chat__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+}
+@media screen and (min-width: 576px) {
+    .chat__content {
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+.chat__content > *:nth-child(1) {
+    display: none;
+}
+@media screen and (min-width: 576px) {
+    .chat__content > *:nth-child(1) {
+        display: block;
+    }
+}

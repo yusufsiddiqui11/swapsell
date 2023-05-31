@@ -1,0 +1,30 @@
+<article class="offer-dialog">
+
+    <div class="offer-dialog__container">
+        
+        <h1 class="offer-dialog__title">
+            
+            <span>Make an Offer</span>
+
+            <mat-icon 
+                class="closeBtn"
+                (click)="toggleDialog()"
+            >
+                close
+            </mat-icon>
+        
+        </h1>
+
+        <input
+            class="offer-dialog__input"
+            type="number"
+            [(ngModel)]="amount"
+        />
+
+        <button class="offer-dialog__btn" (click)="toggleDialog()">
+            confirm
+        </button>
+
+    </div>
+
+</article>

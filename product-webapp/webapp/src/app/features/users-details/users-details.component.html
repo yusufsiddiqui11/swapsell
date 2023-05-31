@@ -1,0 +1,76 @@
+<div class="image">
+    <!-- <button class="desc__btn btn--offer">change Background Image</button> -->
+    <input type="file" placeholder="changed background image" class="update btn--offer" (change)="onFileSelected($event)">
+    <img *ngIf="imageUrl" class="image__backgorund" [src]="imageUrl" alt="Selected Image">
+</div>
+<div class="userImage">
+    <img class="userImage__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/John_Doe%2C_born_John_Nommensen_Duchac.jpg/330px-John_Doe%2C_born_John_Nommensen_Duchac.jpg" alt="">
+</div>
+<div class="userImageBackground">
+    <div class="fistName">
+        <p class="name">John</p>
+    </div>
+    <div class="lastName">        
+        <p class="name">Doe</p>
+    </div>
+</div>
+<div class="personal" @fade>
+    <div class="personal__userDetails">
+        <div class="userDetails__width">
+            <img matTooltip="gmail" src="https://img.icons8.com/color/48/null/gmail--v1.png"/>
+            <p >JohnDoe@gmail.com</p>
+        </div>
+    </div>
+    <div class="personal__userDetails">
+        <div class="userDetails__width">
+            <img matTooltip="phone number" src="https://img.icons8.com/color/48/null/apple-phone.png"/>
+            <p>8765432190</p>
+        </div>
+    </div>
+    <div class="personal__userDetails">
+        <div class="userDetails__width">
+            <img matTooltip="Address" src="https://img.icons8.com/fluency/48/null/address.png"/>
+                <p>Postmaster, Post Office AMRITSAR G.P.O. (G.P.O.), AMRITSAR, PUNJAB (PB), India (IN), Pin Code:- 143001. </p>
+        </div>
+    </div>
+    <div class="personal__userDetails">
+        <div class="userDetails__width">
+            <img matTooltip="city" src="https://img.icons8.com/fluency/48/null/city-buildings.png"/>
+            <p>Amritsar</p>
+        </div>
+    </div>
+    <div class="personal__userDetails">
+        <div class="userDetails__width">
+            <img matTooltip="State" src="https://img.icons8.com/fluency/48/null/country.png"/>
+            <p>PUNJAB</p>
+        </div>
+    </div>
+    <div class="personal__userDetails">
+        <div class="userDetails__width">
+            <img matTooltip="Age" src="https://img.icons8.com/color/48/null/age.png"/>
+            <p>32</p>
+        </div>
+    </div>
+    <div *ngIf="isMale" class="personal__userDetails">
+        <div class="userDetails__width">
+            <img matTooltip="Male" src="https://img.icons8.com/fluency/48/null/user-male.png"/>
+            <p>Male</p>
+        </div>
+    </div>
+    <div *ngIf="isFemale" class="personal__userDetails">
+        <div class="userDetails__width">
+            <img matTooltip="Male" src="https://img.icons8.com/fluency/48/null/user-female.png"/>
+            <p>Female</p>
+        </div>
+    </div>
+</div>
+<div class="goBack">
+    <div class="goBack__button_tag">
+        <div class="tag__goBackDiv">
+            <button class="goBack__button" routerLink="/userDashBoard">Go back</button>
+        </div>
+        <div class="tag__goBackDiv">
+            <button class="updateProfile__button" routerLink="/editDetails">Update Profile</button>
+        </div>
+    </div>
+</div>

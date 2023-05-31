@@ -1,0 +1,22 @@
+server:
+  port: 8084
+spring:
+  #  data:
+  #    mongodb:
+  ##      uri: mongodb://mongodb:27017
+  #      database: userTransactions
+  #      uri: mongodb://localhost:27017
+  application:
+    name: payment-service
+paypal:
+  mode: sandbox
+  client:
+    id: "AcFxM4s-ajIUTPv04DAmjtF2DFM0ISHZhRdQBzGaUjbdRaY6vRO-oqimrPTEXffCKe2VML5KZUkAX0yF"
+    secret: "ECSAa34KuItBI3ce6DG7qQFsLe_g0F4MBQa8qQf06a1ZovKY5hrTX7z7dcHecvcyt4pSgyA0Zlm2hSv_"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true

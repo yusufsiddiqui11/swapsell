@@ -1,0 +1,90 @@
+.userForm {
+  padding: 1rem;
+}
+
+.userForm__title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 900;
+  margin-block-end: 2rem;
+}
+
+.userForm__img {
+  margin: auto;
+  width: 180px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--accent);
+  margin-block-end: 1rem;
+}
+
+.userForm__img img {
+  width: 100%;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.userForm__subtitle {
+  font-size: 1rem;
+  color: var(--text3);
+}
+
+.userForm__btns {
+  width: 100%;
+  margin-block-start: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.userForm__btns button {
+  outline: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  width: 150px;
+  border-radius: 0.25rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  margin-block-end: 1rem;
+}
+
+.submitBtn {
+  border: none;
+  color: #fff;
+  background-color: var(--accent);
+}
+
+.backBtn {
+  background: none;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 49%;
+}
+
+.third-width {
+  width: 32%;
+}
+
+.mat-radio-button {
+  display: block;
+  margin: 5px 0;
+}

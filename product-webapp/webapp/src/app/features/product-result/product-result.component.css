@@ -1,0 +1,136 @@
+p {
+    margin: 0;
+}
+
+.result {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        'header'
+        'filter'
+        'container'
+    ;
+}
+@media screen and (min-width: 576px) {
+    .result {
+        grid-template-columns: 280px 1fr 1fr;
+        grid-template-areas: 
+            'filter header header'
+            'filter container container'
+            'filter container container'
+            'filter container container'
+        ;
+        grid-template-rows: 60px 1fr 1fr 1fr;
+    }
+}
+
+/* 
+    header
+*/
+
+header {
+    padding: 1rem;
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--text3);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown__btn {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+    padding-inline-end: 0;
+    cursor: pointer;
+    border: 1px solid #bbbbbb;
+    border-radius: 2.5px;
+}
+@media screen and (min-width: 576px) {
+    .dropdown__btn {
+        border: none;
+    }
+}
+
+.dropdown__btn span {
+    color: var(--text3);
+    display: none;
+}
+@media screen and (min-width: 576px) {
+    .dropdown__btn span {
+        display: inline-block;
+    }
+}
+
+.dropdown__data {
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column;
+    border-radius: 0.25rem;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+.dropdown__data p {
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.dropdown__data p:hover {
+    background-color: #e6e6e6;
+}
+
+/* 
+    filter 
+*/
+
+aside {
+    grid-area: filter;
+}
+
+.filter__btn {
+    border: 1px solid #bbbbbb;
+    border-radius: 2.5px;
+    padding: 0.5rem;
+    margin-inline: 1rem;
+    width: fit-content;
+    margin-left: auto;
+    cursor: pointer;
+    margin-block-end: 1rem;
+}
+@media screen and (min-width: 576px) {
+    .filter__btn {
+        display: none;
+    }
+}
+
+/* 
+    products - main section
+*/
+
+main {
+    padding: 0.5rem 1rem;
+    grid-area: container;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;    
+    gap: 0.5rem;
+}
+@media screen and (min-width: 576px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+}

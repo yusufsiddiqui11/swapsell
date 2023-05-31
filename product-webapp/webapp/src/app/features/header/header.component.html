@@ -1,0 +1,90 @@
+<header>
+  <mat-icon (click)="toggleMenu()" class="btns menuBtn"> menu </mat-icon>
+
+  <img class="logo" src="../../../assets/logo.svg" alt="logo" routerLink="/" />
+
+  <div class="input">
+    <input
+      type="text"
+      name="search"
+      placeholder="Search for product"
+      [(ngModel)]="keyword"
+    />
+
+    <mat-icon class="searchIcon" (click)="search()"> search </mat-icon>
+  </div>
+
+  <div class="header__btns">
+    <!-- <mat-icon>bedtime</mat-icon> -->
+    <mat-icon>favorite_border</mat-icon>
+    <div class="user" routerLink="/userDashBoard">
+      <mat-icon>person</mat-icon>
+
+      <span>{{ userInitials }}</span>
+    </div>
+  </div>
+
+  <nav class="content" [ngClass]="{ 'content-open': isMenuOpen }">
+    <div>
+      <mat-icon (click)="toggleMenu()" class="btns closeBtn"> close </mat-icon>
+    </div>
+
+    <ul>
+      <li routerLink="/" (click)="toggleMenu()">
+        <img
+          class="icon-image"
+          src="../../../assets/home-icon.png"
+          alt="home-icon"
+        />
+        Home
+      </li>
+      <li routerLink="/userDashBoard" (click)="toggleMenu()">
+        <img
+          class="icon-image"
+          src="../../../assets/user-icon2.png"
+          alt="user-icon"
+        />
+        Profile
+      </li>
+      <li (click)="toggleMenu()">
+        <img
+          class="icon-image"
+          src="../../../assets/fav-icon.png"
+          alt="fav-icon"
+        />
+        Wishlist
+      </li>
+      <li routerLink="/chat" (click)="toggleMenu()">
+        <img
+          class="icon-image"
+          src="../../../assets/chat-icon.png"
+          alt="chat-icon"
+        />
+        Chat
+      </li>
+      <!-- <li (click)="toggleMenu()">
+        <img
+          class="icon-image"
+          src="../../../assets/moon-icon.png"
+          alt="dark theme icon"
+        />
+        Dark theme
+      </li> -->
+    </ul>
+
+    <div class="content__btns">
+      <button class="post">post an ad</button>
+
+      <button
+        class="log"
+        (click)="logout()"
+        routerLink="/login"
+        *ngIf="isLoggedIn"
+      >
+        logout
+      </button>
+
+      <button class="log" routerLink="/login" *ngIf="!isLoggedIn">login</button>
+    </div>
+  </nav>
+</header>

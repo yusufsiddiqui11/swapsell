@@ -1,0 +1,28 @@
+<div class="review-card">
+
+    <div class="review-card__header">
+        <img
+            src="../../../assets/user-icon.png" 
+            alt="user image"
+        />
+
+        <div>
+            <p>John Doe</p>
+            <p>New York, US</p>
+        </div>
+    </div>
+
+    <div class="review-card__rating">
+        <mat-icon  class="icon-star" *ngFor="let i of [1,2,3,4,5]">star</mat-icon>
+    </div>
+
+    <div>
+        <h3 class="review-card__title">Highly Recommended!</h3>
+        <p class="review-card__text">
+            SellSwap is a fantastic platform for buying and selling second-hand goods. 
+            The site is user-friendly and offers a great range of products at  affordable 
+            prices. Highly recommended!
+        </p>
+    </div>
+
+</div>

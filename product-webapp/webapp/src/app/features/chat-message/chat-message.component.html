@@ -1,0 +1,166 @@
+<main class="chat-message">
+
+    <article 
+        class="chat-message__empty"
+        *ngIf="!participantId2"
+    >
+    </article>
+
+    <div *ngIf="participantId2">
+
+        <header class="chat-message__header">
+
+            <section class="header__row1">
+
+                <div>   
+
+                    <img
+                        class="backBtn"
+                        src="../../../assets/back.png"
+                        alt="back button"
+                    />
+
+                    <img
+                        src="../../../assets/user-icon.png"
+                        alt="user image"
+                    />
+
+                    <p>
+                        {{participantId2.split('@')[0] }}
+                    </p>
+                    
+                </div>
+
+
+                <div>
+
+                    <section class="dropdown">
+
+                        <div class="dropdown__btn" (click)="toggleDropdown()">
+                            <mat-icon>more_vert</mat-icon>
+                        </div>
+            
+                        <div class="dropdown__data" *ngIf="dropdown">
+                            <p
+                                *ngFor="let value of dropdownValues"
+                                (click)="updateSort(value)"
+                            >   
+                                {{value}}
+                            </p>
+                        </div>
+            
+                    </section>
+
+                    <mat-icon
+                        class="closeBtn"
+                        (click)="closeMessage()"
+                    >
+                        close
+                    </mat-icon>
+
+                </div>
+
+            </section>
+
+            <!-- <section class="header__row2">
+                <span>iPhone 13 mini 128gb</span>
+                <span>₹38,990</span>
+            </section> -->
+
+        </header>
+
+        <section class="chat-message__container">
+
+            <div #chatContainer>
+                <app-message
+                    *ngFor="let message of messages"
+                    [message]="message"
+                    [userId]="participantId1"
+                >
+                </app-message>
+            </div>
+
+        </section>
+
+        <footer class="chat-message__footer">
+
+            <button 
+                class="offerBtn"
+                (click)="toggleDialog()"
+            >
+                <img
+                    src="../../../assets/sell-icon.png"
+                    alt="icon"
+                />
+                make offer
+            </button>
+
+            <!-- <article class="offer-dialog">
+
+                <div class="offer-dialog__container">
+                    
+                    <h1 class="offer-dialog__title">
+                        
+                        <span>Make an Offer</span>
+            
+                        <mat-icon 
+                            class="closeBtn"
+                            (click)="toggleDialog()"
+                        >
+                            close
+                        </mat-icon>
+                    
+                    </h1>
+            
+                    <input
+                        class="offer-dialog__input"
+                        type="number"
+                        [(ngModel)]="amount"
+                    />
+            
+                    <button class="offer-dialog__btn" (click)="toggleOffer()" >
+                        confirm
+                    </button>
+            
+                </div>
+            
+            </article> -->
+
+            <app-offer-dialog 
+                *ngIf="offer"
+                (dialog)="toggleDialogAndSendMsg($event)"
+            >
+            </app-offer-dialog>
+            
+            <button class="paymentBtn" (click)="openPageInNewTab()" >
+                <img
+                    src="../../../assets/wallet-icon.png"
+                    alt="icon"
+                />
+                make payment 
+            </button>
+
+            <div class="chat-message__input">
+
+                <input
+                    placeholder="Message..."
+                    [(ngModel)]="newMessage"
+                />
+
+                <button 
+                    class="sendBtn"
+                    (click)="sendMessage()"
+                >
+                    <img
+                        src="../../../assets/send.png"
+                        alt="send icon"
+                    />
+                </button>
+
+            </div>
+
+        </footer>
+    
+    </div>
+
+</main>

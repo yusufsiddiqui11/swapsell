@@ -1,0 +1,157 @@
+<app-header></app-header>
+
+<div class="product-page">
+
+  <section class="product-page__img-container">
+    <div>
+      <mat-icon class="img-btn" (click)="prevImage()">
+        keyboard_arrow_left
+      </mat-icon>
+
+      <div
+        class="product-page__img"
+        [style.background-image]="'url(' + imgUrl + product.images[0] + ')'"
+      ></div>
+
+      <mat-icon class="img-btn" (click)="nextImage()">
+        keyboard_arrow_right
+      </mat-icon>
+    </div>
+  </section>
+
+  <section class="product-page__desc">
+    <h1 class="desc__name">
+      {{product.name}}
+      <mat-icon class="wishlistBtn">favorite_border</mat-icon>
+    </h1>
+
+    <h2 class="desc__title">{{product.title}}</h2>
+
+    <p class="desc__price">₹{{product.price.toLocaleString('en-IN')}}</p>
+
+    <div class="desc__btns">
+      <!-- <button class="desc__btn btn--offer">
+        Make offer
+      </button> -->
+
+      <button class="desc__btn btn--chat" (click)="chat()">
+        Chat with seller
+      </button>
+    </div>
+
+    <div class="desc__overview">
+      <h3 class="desc__subtitle">overview</h3>
+
+      <div class="overview__container">
+        <div class="overview__block">
+          <mat-icon>hourglass_empty</mat-icon>
+          <div>
+            <p>Age</p>
+            <p>{{product.ageInDays}} days</p>
+          </div>
+        </div>
+
+        <div class="overview__block">
+          <mat-icon>healing</mat-icon>
+          <div>
+            <p>Condition</p>
+            <p>{{product.condition}}</p>
+          </div>
+        </div>
+
+        <div class="overview__block">
+          <mat-icon>date_range</mat-icon>
+          <div>
+            <p>Posting date</p>
+            <p>{{product.date}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="desc__desc">
+      <h3 class="desc__subtitle">description</h3>
+
+      <p class="desc__text">
+        {{product.description}}
+      </p>
+    </div>
+
+    <div class="desc__seller">
+      <h3 class="desc__subtitle">seller details</h3>
+
+      <div class="seller__desc">
+        <img src="../../../assets/user-icon.png" alt="user image" />
+
+        <div>
+          <p class="seller__name">
+            {{seller.firstName}} {{seller.lastName}}
+            <mat-icon class="icon-tick">check_circle</mat-icon>
+          </p>
+
+          <div class="seller__rating">
+            <div>
+              <mat-icon class="icon-star" *ngFor="let i of [1, 2, 3, 4, 5]"
+                >star</mat-icon
+              >
+            </div>
+            (5 reviews)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="product-page__related">
+    <h3 class="related__title">Similar products</h3>
+
+    <div id="productCardCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-container">
+            <div class="row">
+              <div class="col-md-3" *ngFor="let product of products1">
+                <div class="product-card">
+                  <app-product-card [product]="product"> </app-product-card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-container">
+            <div class="row">
+              <div class="col-md-3" *ngFor="let product of products2">
+                <div class="product-card">
+                  <app-product-card [product]="product"> </app-product-card>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#productCardCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#productCardCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+  </section>
+  
+</div>

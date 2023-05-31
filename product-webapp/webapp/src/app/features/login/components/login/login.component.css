@@ -1,0 +1,155 @@
+.login {
+    display: flex;
+}
+@media screen and (min-width: 576px) {
+    .login {
+        height: 100%;
+    }
+}
+
+/* 
+    login card - left section 
+*/
+
+.login__card {
+    width: 50%;
+    background-color: #582eac;
+    color: #fff;
+    display: none;
+}
+@media screen and (min-width: 576px) {
+    .login__card {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+.login__card > div {
+    transform: translateY(-4rem);
+}
+
+.logo {
+    width: 15rem;
+    transform: translateY(4rem);
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+.card__title {
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 1.1em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-block: 2rem 4rem;
+}
+
+.card__footer {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+a {
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em;
+}
+
+/*  
+    login form - right section 
+*/
+
+.login__form {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+@media screen and (min-width: 576px) {
+    .login__form {
+        width: 50%;
+        padding: 0 4rem;
+    }
+}
+
+form {
+    text-align: center;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.form__header {
+    font-size: 1.35rem;
+    line-height: 1.35em;
+    margin-block-end: 2rem;
+}
+.form__header p {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+@media screen and (min-width: 576px) {
+    .form__header {
+        display: none;
+    }
+}
+
+button {
+    border: none;
+    outline: none;
+    width: 100%;
+    background: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.05rem;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+}
+
+.loginBtn {
+    background-color: #582eac;
+    color: #fff;
+}
+
+.googleBtn {
+    position: relative;
+    border: 1px solid #616161;
+    color: #616161;
+}
+
+.googleBtn > img {
+    width: 2.5rem;
+}
+
+.form__gap {
+    text-align: center;
+    color: #616161;
+    font-weight: 600;
+    margin-block: 2rem;
+}
+
+.googleBtn > img {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+}
+
+.form__footer {
+    margin: 4rem 0;
+    text-align: center;
+}
+@media screen and (min-width: 576px) {
+    .form__footer {
+        display: none;
+    }
+}

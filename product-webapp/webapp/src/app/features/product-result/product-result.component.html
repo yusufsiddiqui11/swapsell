@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+<div class="result">
+
+    <header>
+        
+        <section>
+            {{filteredProducts.length}} items 
+        </section>
+
+        <section class="dropdown">
+
+            <div class="dropdown__btn" (click)="toggleDropdown()">
+                <p>
+                    <span>sort by:</span> {{sort}}
+                </p>
+                <mat-icon>keyboard_arrow_down</mat-icon>
+            </div>
+
+            <div class="dropdown__data" *ngIf="dropdown">
+                <p
+                    *ngFor="let value of dropdownValues"
+                    (click)="updateSort(value)"
+                >   
+                    {{value}}
+                </p>
+            </div>
+
+        </section>
+
+    </header>
+
+    <aside>
+    
+        <p 
+            class="filter__btn"
+            (click)="toggleFilter(true)"
+        >
+            Filter
+        </p>
+        
+        <app-filter [filter]="filter" (filterEvent)="handleFilterEvent($event)"></app-filter>
+    
+    </aside>
+
+    <main>
+
+        <ng-container *ngIf="products && filteredProducts.length > 0">
+            <app-product-card *ngFor="let product of filteredProducts" [product]="product"></app-product-card>
+        </ng-container>
+
+    </main>
+
+
+</div>

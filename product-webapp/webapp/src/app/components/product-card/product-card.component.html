@@ -1,0 +1,26 @@
+<article class="product-card" (click)="goToProductPage(product.id)">
+  <section
+    class="product-card__img"
+    [style.background-image]="'url(../../../assets/' + product.images[0] + ')'"
+  ></section>
+
+  <section class="product-card__desc">
+    <p class="product-card__title">{{ product.title }}</p>
+
+    <p class="product-card__price">
+      ₹{{ product.price.toLocaleString("en-IN") }}
+    </p>
+
+    <div class="product-card__footer">
+      <p class="product-card__location">
+        <mat-icon>location_on</mat-icon>
+        <span>{{product.state}}</span>
+      </p>
+
+      <p class="product-card__date">
+        <mat-icon>date_range</mat-icon>
+        <span>{{product.date.slice(0,5)}}</span>
+      </p>
+    </div>
+  </section>
+</article>

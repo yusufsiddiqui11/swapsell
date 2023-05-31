@@ -1,0 +1,10 @@
+<article class="category-card" (click)="showResult()">
+  <section
+    class="category-card__img"
+    [style.background-image]="'url(../../../assets/' + category.image + ')'"
+  ></section>
+
+  <section class="category-card__desc">
+    <p>{{ category.name }}</p>
+  </section>
+</article>

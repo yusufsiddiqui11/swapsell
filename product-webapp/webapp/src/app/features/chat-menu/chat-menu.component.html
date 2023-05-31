@@ -1,0 +1,40 @@
+<aside class="chat-menu">
+    
+    <header>
+
+        <img
+            src="../../../assets/message-icon.png"
+            alt="message icon"
+        />
+
+        <span>Messages</span>
+
+    </header>
+
+    <div class="users">
+        <article 
+            class="user"
+            *ngFor="let user of users"
+            (click)="goToMessage(user.userId)"
+        >
+
+            <img
+                src="../../../assets/user-icon.png"
+                alt="user image"
+                class="user__img"
+            />
+
+            <div class="user__desc">
+                <p class="user__title">
+                    <span>{{ user.userId.split('@')[0] }}</span>
+                    <span class="user__time">{{user.timestamp}}</span>
+                </p>
+                <p class="user__msg">
+                    {{user.message}}
+                </p>
+            </div>
+
+        </article>
+    </div>
+
+</aside>

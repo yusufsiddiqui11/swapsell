@@ -1,0 +1,113 @@
+p, h1, h2, h3 {
+    margin: 0;
+}
+
+/* 
+    header
+*/
+
+.dashboard__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  height: 150px;
+}
+
+.header__img {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: blueviolet;
+  border-radius: 50%;
+}
+
+img {
+  width: 100%;
+}
+
+.header__info {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.header__info > *:nth-child(2) {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.header__info > *:nth-child(2) {
+    font-size: 0.95em;
+    color: var(--text3);
+}
+
+.header__options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  color: var(--accent);
+}
+
+.postBtn {
+  border-radius: 0.25rem;
+  background-color: var(--accent);
+  color: #fff;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* 
+    ads container
+*/
+
+.user__ads {
+  margin-block-end: 2rem;
+  padding: 1rem 2rem;
+}
+
+.ads__title {
+  text-align: center;
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  /* letter-spacing: 0.1em; */
+  /* color: #454545; */
+  padding-inline: 1rem;
+  margin-block-end: 1rem;
+}
+
+.ads__ads {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.ads__ads2 {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-align: center;
+  margin-block: 4rem;
+
+}
+
+.emptyTitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text3);
+}

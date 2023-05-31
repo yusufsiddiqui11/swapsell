@@ -1,0 +1,50 @@
+h1, h2, h3, p {
+    margin: 0;
+}
+
+.review-card {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+@media screen and (min-width: 576px) {
+    .review-card {
+        width: fit-content;
+    }
+}
+
+.review-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.95em;
+    font-weight: 500;
+}
+
+.review-card__header p:nth-child(2) {
+    color: var(--text3);
+}
+
+.review-card__header img {
+    width: 2.5rem;
+} 
+
+.review-card__rating {
+    color: #fea31b;
+}
+
+.review-card__title {
+    font-weight: 500;
+    margin-block-end: 0.5rem;
+    display: none;
+}
+
+.review-card__text {
+    color: var(--text3);
+    font-size: 0.9em;
+}

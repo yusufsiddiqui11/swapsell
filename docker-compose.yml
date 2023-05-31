@@ -1,0 +1,125 @@
+version: "3"
+services:
+  eureka-server:
+    build: eureka-server/
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+#  api-gateway:
+#    build: api-gateway/
+#    container_name: api-gateway
+#    depends_on:
+#      - eureka-server
+#
+#    ports:
+#      - "8086:8086"
+  product-webapp:
+    build: product-webapp/
+    image: product-webapp
+    depends_on:
+      - eureka-server
+#      - api-gateway
+    container_name: product-webapp
+    ports:
+      - "8099:8099"
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USERNAME: root
+      MYSQL_PASSWORD: root
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017-27017"
+  neo4j:
+    image: neo4j:4.2.3
+    container_name: neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: neo4j/root
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      AMQP_URL: 'amqp://rabbitmq?connection_attempts=5&retry_delay=5'
+      RABBITMQ_DEFAULT_USER: "guest"
+      RABBITMQ_DEFAULT_PASS: "guest"
+  authentication-service:
+    build: authentication-service/
+    container_name: authentication-service
+    ports:
+      - "8080:8080"
+    links:
+      - eureka-server
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+    depends_on:
+      - mysql
+#      - api-gateway
+  chat-service:
+    build: chat-service/
+    container_name: chat-service
+    ports:
+      - "8081:8081"
+    links:
+      - eureka-server
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+    depends_on:
+      - mongodb
+#      - api-gateway
+  email-service:
+    build: email-service/
+    container_name: email-service
+    ports:
+      - "8086:8086"
+    links:
+      - eureka-server
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+    # ???
+  payment-service:
+    build: payment-service/
+    container_name: payment-service
+    ports:
+      - "8084:8084"
+    links:
+      - eureka-server
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+    # ???
+  product-service:
+    build: product-service/
+    container_name: product-service
+    ports:
+      - "9090:9090"
+    links:
+      - eureka-server
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+    depends_on:
+      - neo4j
+#      - api-gateway
+  user-service:
+    build: user-service/
+    container_name: user-service
+    ports:
+      - "8082:8082"
+    links:
+      - eureka-server
+    environment:
+      - eureka.client.service-url.defaultZone=http://eureka-server:8761/eureka/
+    depends_on:
+      - mongodb
+#      - api-gateway

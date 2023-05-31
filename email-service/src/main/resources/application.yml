@@ -1,0 +1,27 @@
+spring:
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    port: 587
+    username: swapsellteam@gmail.com
+    password: uewaxvidehmxlbzu
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+  application:
+    name: email-service
+mail:
+  smtp:
+    debug: true
+server:
+  port: 8086
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true

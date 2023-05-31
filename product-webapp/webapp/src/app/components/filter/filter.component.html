@@ -1,0 +1,71 @@
+<div class="filter" *ngIf="filter">
+
+    <h1 class="filter__title">
+    
+        <span>filters</span>
+        
+        <mat-icon (click)="toggleFilter()">clear</mat-icon>
+    
+    </h1>
+
+    <section class="filter__category price">
+        
+        <h2 class="filter__subtitle">
+            price
+        </h2>
+          
+        <div class="price__inputs">
+
+            <mat-form-field appearance="outline">
+                <mat-label>from</mat-label>
+                <input matInput [(ngModel)]="filterData.filters.fromPrice">
+            </mat-form-field>
+
+            <mat-form-field  appearance="outline">
+                <mat-label>to</mat-label>
+                <input matInput [(ngModel)]="filterData.filters.toPrice">
+            </mat-form-field>
+
+        </div>
+
+    </section>
+    
+    <section class="filter__category condition">
+        
+        <h2 class="filter__subtitle">
+            condition
+        </h2>
+
+        <div class="condition__inputs">
+
+            <mat-checkbox [(ngModel)]="filterData.filters.isNew">New</mat-checkbox>
+            <mat-checkbox [(ngModel)]="filterData.filters.isGood">Good</mat-checkbox>
+            <mat-checkbox [(ngModel)]="filterData.filters.isUsed">Used</mat-checkbox>
+
+        </div>
+
+    </section>
+    
+    <section class="filter__category">
+        
+        <h2 class="filter__subtitle">
+            age
+        </h2>
+
+        <mat-radio-group aria-label="Select an option" [(ngModel)]="filterData.filters.age">
+            <mat-radio-button value="90">Less than 3 months</mat-radio-button>
+            <mat-radio-button value="135">Between 3-6 months</mat-radio-button>
+            <mat-radio-button value="180">More than 6 months</mat-radio-button>
+        </mat-radio-group>          
+
+    </section>
+
+    <button class="filter__btn" (click)="applyFilter()">
+        apply
+    </button>
+    
+    <button class="cancel__btn" (click)="resetFilter()">
+        cancel
+    </button>
+
+</div>

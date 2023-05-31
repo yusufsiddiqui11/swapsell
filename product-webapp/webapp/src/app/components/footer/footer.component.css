@@ -1,0 +1,126 @@
+.footer {
+    position: relative;
+    background-color: #f2f2f2;
+    background: linear-gradient(145deg, rgba(134,88,225,1) 0%, rgba(88,46,172,1) 100%);
+    color: #fff;
+    padding: 1rem;
+    /* box-shadow: 1px 1px 4px rgba(0,0,0, 0.25); */
+}
+
+.logo {
+    width: 7.5rem;
+    display: block;
+    margin: auto;
+}
+@media screen and (min-width: 576px) {
+    .logo {
+        display: block;
+        width: 12.5rem;
+        transform: translateY(-1rem);
+        /* margin: 0; */
+    }
+}
+
+.footer__logo {
+    position: relative;
+}
+
+.copyright {
+    font-size: 0.75em;
+    text-align: center;
+    font-weight: 500;
+    color: #d4d4d4;
+}
+
+.logo-copyright {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    display: none;
+}
+@media screen and (min-width: 576px) {
+    .logo-copyright {
+        display: block;
+    }
+}
+
+.footer__row2 {
+    margin-block-start: 1rem;
+}
+@media screen and (min-width: 576px) {
+    .footer__row2 {
+        display: none;   
+    }
+}
+
+.footer__title {
+    color: #d4d4d4;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-block-end: 0.75rem;
+}
+
+.footer__row1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    text-align: center;
+}
+@media screen and (min-width: 576px) {
+    .footer__row1 {
+        grid-template-columns: 40% 1fr 1fr 1fr;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0;
+        text-align: left;
+    }
+}
+
+.footer__logo {
+    width: 100% !important;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-block-end: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 0.95em;
+    text-transform: uppercase;
+}
+
+.footer__social .footer__title {
+    display: none;
+}
+@media screen and (min-width: 576px) {
+    .footer__social .footer__title {
+        display: block;
+    }
+}
+
+.footer__social div {
+    margin-block: 1rem;
+    font-size: 1.25rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+@media screen and (min-width: 576px) {
+    .footer__social div {
+        margin-block: 0;
+        justify-content: flex-start;
+    }
+}
+
+.footer__social i {
+    transform: scale(1.25);
+    cursor: pointer;
+}

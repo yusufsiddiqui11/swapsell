@@ -1,0 +1,133 @@
+<div class="userForm">
+  <h1 class="userForm__title">User Details</h1>
+
+  <form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+    <div class="userForm__img">
+      <img
+        class="profile-image"
+        src="../../../../../assets/SwapSelll(2).svg"
+        alt="Photo of a Shiba Inu"
+      />
+    </div>
+
+    <!-- <mat-form-field appearance="outline">
+      <input type="file" formControlName="image" matInput />
+    </mat-form-field> -->
+
+    <mat-form-field class="full-width" appearance="outline" class="full-width">
+      <mat-label>Email Address</mat-label>
+      <input
+        matInput
+        placeholder="email"
+        formControlName="email"
+        [disabled]="true"
+      />
+      <mat-error *ngIf="addressForm.controls['email'].hasError('required')">
+        email name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="third-width" appearance="outline" class="full-width">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="First name" formControlName="firstName" />
+      <mat-error *ngIf="addressForm.controls['firstName'].hasError('required')">
+        First name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="third-width" appearance="outline" class="full-width">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Last name" formControlName="lastName" />
+      <mat-error *ngIf="addressForm.controls['lastName'].hasError('required')">
+        Last name is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    
+    <mat-form-field class="third-width" appearance="outline" class="full-width">
+      <mat-label>phone Number</mat-label>
+      <input
+        matInput
+        type="number"
+        placeholder="phone number"
+        formControlName="phoneNumber"
+        maxlength="10"
+      />
+      <mat-error
+        *ngIf="addressForm.controls['phoneNumber'].hasError('required')"
+      >
+        phone number is <strong>required</strong>
+      </mat-error>
+      <mat-error
+        *ngIf="addressForm.controls['phoneNumber'].hasError('maxlength')"
+      >
+        phone number cannot exceed 10 digits
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width" appearance="outline" class="full-width">
+      <mat-label>Address</mat-label>
+      <textarea
+        matInput
+        placeholder="Address"
+        formControlName="address"
+      ></textarea>
+      <mat-error *ngIf="addressForm.controls['address'].hasError('required')">
+        Address is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="third-width" appearance="outline" class="full-width">
+      <mat-label>City</mat-label>
+      <input matInput placeholder="City" formControlName="city" />
+      <mat-error *ngIf="addressForm.controls['city'].hasError('required')">
+        City is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="third-width" appearance="outline" class="full-width">
+      <mat-label>State</mat-label>
+      <mat-select placeholder="State" formControlName="state" [value]="addressForm.get('state').value">
+        <mat-option *ngFor="let state of states" [value]="state.name">
+          {{ state.name }}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="addressForm.controls['state'].hasError('required')">
+        State is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="third-width" appearance="outline" class="full-width">
+      <mat-label>Pin code</mat-label>
+      <input
+        matInput
+        maxlength="5"
+        type="number"
+        formControlName="pinCode"
+      />
+      <!-- <mat-hint align="end">{{ postalCode.value.length }} / 6</mat-hint> -->
+      <mat-error *ngIf="addressForm.controls['pinCode'].hasError('required')">
+        Pin code is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="addressForm.controls['pinCode'].hasError('minlength')">
+        Pin code is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- <label id="example-radio-group-label">Pick your Gender</label> -->
+    <mat-radio-group class="full-width" formControlName="gender">
+      <mat-label>Gender</mat-label>
+      <div class="row">
+        <mat-radio-button value="Male">Male</mat-radio-button>
+        <mat-radio-button value="Female">Female</mat-radio-button>
+        <mat-radio-button value="Other">Other</mat-radio-button>
+      </div>
+    </mat-radio-group>
+
+    <div class="userForm__btns">
+      <button class="submitBtn" type="submit" [disabled]="addressForm.invalid">
+        Update
+      </button>
+      <button class="backBtn" routerLink="/userDashBoard">Back</button>
+    </div>
+  </form>
+</div>

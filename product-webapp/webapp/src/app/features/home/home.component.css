@@ -1,0 +1,77 @@
+h3 {
+  margin: 0;
+}
+
+.home__carousel {
+  margin-block-end: 2rem;
+  height: 400px;
+  overflow: hidden;
+}
+
+.home__carousel .carousel-inner {
+  height: 100%;
+}
+
+.home__carousel .carousel-item {
+  height: 100%;
+}
+
+.home__carousel .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#productCardCarousel,
+#categoryCardCarousel {
+  padding: 0 2rem;
+}
+
+.carousel-container {
+  width: 100%;
+  padding: 20px;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#carouselExampleAutoplaying button,
+#productCardCarousel button,
+#categoryCardCarousel button {
+  width: 5%;
+  filter: invert(1);
+}
+
+section {
+    margin-block-end: 2rem;
+}
+
+.home__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #454545;
+  padding-inline: 1rem;
+}
+
+/* 
+    review section
+*/
+
+.home__reviews > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 576px) {
+  .home__reviews > div {
+    padding: 2rem 4rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

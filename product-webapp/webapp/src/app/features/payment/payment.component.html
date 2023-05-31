@@ -1,0 +1,39 @@
+<!-- <input type="number" [(ngModel)]="finalAmount" >
+<div id="paypal-checkout-btn"></div> -->
+
+
+<!-- <div #paypalRef></div> -->
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form (submit)="submitForm()"  action="pay">
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label>Accepted Cards</label>
+            <div class="icon-container">
+              <img width="48" height="48" src="https://img.icons8.com/color/48/visa.png" alt="visa"/>
+              <img width="48" height="48" src="https://img.icons8.com/fluency/48/amex.png" alt="amex"/>
+              <img width="48" height="48" src="https://img.icons8.com/color/48/mastercard.png" alt="mastercard"/>
+            </div>
+            <label for="price">Total Amount in <b>Indian Rupees</b></label>
+            <input type="text" id="indian_rupees" [(ngModel)]="indianPrice" (input)="convertToUSD()"value="10" >
+            <label for="price">Total Amount in <b> USD</b></label>
+            <input type="text" id="price" name="price" [(ngModel)]="orderData.price" [readonly]="true" value="10" >
+            <label for="currency">Currency</label>
+            <input type="text" id="currency" name="currency" [(ngModel)]="orderData.currency" placeholder="Enter currency" [disabled]="true">
+            <label for="method">Payment Method</label>
+            <input type="text" id="method" name="paymentMethod" [(ngModel)]="orderData.method" placeholder="payment method" [disabled]="true">
+            <label for="intent">Intent</label>
+            <input type="text" id="intent" name="intent" [(ngModel)]="orderData.intent" value="sale" [disabled]="true">
+            <label for="description">Payment Description</label>
+            <input type="text" id="description" name="paymentDescription" [(ngModel)]="orderData.description" placeholder="Payment Description" >
+          </div>
+          <input type="submit" value="CONTINUE TO CHECK OUT" class="btn">
+  
+        </form>
+  
+      </div>
+    </div>
+  </div>
+  
+  

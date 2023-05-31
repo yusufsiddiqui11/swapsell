@@ -1,0 +1,15 @@
+<article 
+    class="message"
+    [style.background-color]="userId === message.senderId && '#9932CC'"
+    [style.margin-left]="userId === message.senderId && 'auto'"
+>
+
+    <p class="message__content">
+        {{message.content}}
+    </p>
+    
+    <p class="message__time">
+        {{message.timestamp}}
+    </p>
+
+</article>

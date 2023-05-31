@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<div class="dashboard">
+  <header class="dashboard__header">
+    <div class="header__img">
+      <img src="../../../../../assets/SwapSelll(2).svg" alt="user pic" />
+    </div>
+
+    <div class="header__info">
+      <h2>{{user.firstName}} {{user.lastName}}</h2>
+      <h3>{{user.email}}</h3>
+    </div>
+
+    <div class="header__options">
+      <button matTooltip="update your details" routerLink="/editDetails">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button matTooltip="Your messages" routerLink="/chat">
+        <mat-icon> message</mat-icon>
+      </button>
+      <!-- <button  matTooltip="Notifications" >
+                <mat-icon   >notifications</mat-icon>
+            </button> -->
+      <button class="postBtn" routerLink="../postAnAdd">post an ad</button>
+    </div>
+  </header>
+
+  <section class="user__ads">
+    <h1 class="ads__title">Your live ads</h1>
+
+    <div class="ads__ads" *ngIf="products.length !== 0">
+      <app-product-card *ngFor="let product of products" [product]="product">
+      </app-product-card>
+    </div>
+
+    <div class="ads__ads2" *ngIf="products.length === 0">
+      
+      <h1 class="emptyTitle">
+        No Live Products to Display...
+      </h1>
+
+    </div>    
+
+  </section>
+</div>

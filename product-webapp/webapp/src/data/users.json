@@ -1,0 +1,271 @@
+{
+    "users": [
+        {
+            "id": "1234",
+            "firstName": "Bob",
+            "lastName": "The Builder",
+            "email": "Bob123@gmail.com"
+        },
+        {
+            "id": "5678",
+            "firstName": "Alice",
+            "lastName": "Johnson",
+            "email": "alice.johnson@example.com"
+        },
+        {
+            "id": "9012",
+            "firstName": "John",
+            "lastName": "Doe",
+            "email": "johndoe@gmail.com"
+        },
+        {
+            "id": "3456",
+            "firstName": "Emma",
+            "lastName": "Smith",
+            "email": "emma.smith@example.com"
+        },
+        {
+            "id": "7890",
+            "firstName": "Michael",
+            "lastName": "Brown",
+            "email": "mbrown@gmail.com"
+        },
+        {
+            "id": "3456",
+            "firstName": "Emma",
+            "lastName": "Smith",
+            "email": "emma.smith@example.com"
+        },
+        {
+            "id": "7890",
+            "firstName": "Michael",
+            "lastName": "Brown",
+            "email": "mbrown@gmail.com"
+        }
+    ],
+    "products": [
+        {
+            "name": "Dell XPS 15",
+            "title": "Dell XPS 15 Laptop",
+            "description": "A high-performance laptop for gaming and professional use",
+            "image": "https://example.com/dell-xps-15.jpg",
+            "price": 1799.0,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 0
+        },
+        {
+            "name": "Nike Air Max",
+            "title": "Nike Air Max 270",
+            "description": "Stylish and comfortable sneakers for everyday wear",
+            "image": "https://example.com/nike-air-max.jpg",
+            "price": 129.0,
+            "category": "Fashion",
+            "condition": "New",
+            "ageInDays": 0
+        },
+        {
+            "name": "Dell XPS 15",
+            "title": "Dell XPS 15 Laptop",
+            "description": "A high-performance laptop for gaming and professional use",
+            "image": "https://example.com/dell-xps-15.jpg",
+            "price": 1799.0,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 0
+        },
+        {
+            "name": "Sony PlayStation 5",
+            "title": "Sony PS5 Gaming Console",
+            "description": "Next-gen gaming console with powerful hardware and stunning graphics",
+            "image": "https://example.com/sony-ps5.jpg",
+            "price": 499.0,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 0
+        },
+        {
+            "name": "Canon EOS R5",
+            "title": "Canon EOS R5 Mirrorless Camera",
+            "description": "A professional-grade camera with advanced features and high-resolution capabilities",
+            "image": "https://example.com/canon-eos-r5.jpg",
+            "price": 3899.0,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 0
+        },
+        {
+            "name": "Samsung QLED TV",
+            "title": "Samsung Q90R 4K QLED TV",
+            "description": "A high-end QLED TV with stunning picture quality and immersive sound",
+            "image": "https://example.com/samsung-qled-tv.jpg",
+            "price": 1999.0,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 0
+        },
+        {
+            "name": "Amazon Echo Dot",
+            "title": "Amazon Echo Dot (4th Gen)",
+            "description": "A compact smart speaker with Alexa voice assistant",
+            "image": "https://example.com/amazon-echo-dot.jpg",
+            "price": 49.0,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 0
+        },
+        {
+            "name": "Canon EOS R5",
+            "title": "Canon EOS R5 Mirrorless Camera",
+            "description": "A professional-grade camera with advanced features and high-resolution capabilities",
+            "image": "https://example.com/canon-eos-r5.jpg",
+            "price": 3899.0,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 0
+        }
+    ],
+    "chats": [
+        {
+            "chatId": "b9c729d5-f3b5-43e4-bbf7-daa0f76edb7e",
+            "participants": [
+                "1234",
+                "5678"
+            ],
+            "messages": [
+                {
+                    "messageId": "959285ae-b434-4165-a298-3749d4ad0f00",
+                    "senderId": "1234",
+                    "receiverId": "5678",
+                    "content": "Hi",
+                    "timestamp": "11 May 2023"
+                },
+                {
+                    "messageId": "c6c16086-e7af-4463-ad86-8bc26b4e6f36",
+                    "senderId": "5678",
+                    "receiverId": "1234",
+                    "content": "Hello, how are you?",
+                    "timestamp": "11 May 2023"
+                },
+                {
+                    "messageId": "7ebe6e68-39df-4b1c-9b3e-74162e0e6858",
+                    "senderId": "1234",
+                    "receiverId": "5678",
+                    "content": "I'm doing well. How about you?",
+                    "timestamp": "11 May 2023"
+                }
+            ]
+        },
+        {
+            "chatId": "9e584da3-5977-4b34-bafe-3a58dd4f40b6",
+            "participants": [
+                "1234",
+                "9012"
+            ],
+            "messages": [
+                {
+                    "messageId": "e9e674a0-d2d2-4a77-9646-3c3c37ed5fc2",
+                    "senderId": "1234",
+                    "receiverId": "9012",
+                    "content": "Hey, how's it going?",
+                    "timestamp": "12 May 2023"
+                },
+                {
+                    "messageId": "4e0295e0-2dc5-408f-9100-9c94e4c2d1c3",
+                    "senderId": "9012",
+                    "receiverId": "1234",
+                    "content": "Hi! I'm doing great, thanks. How about you?",
+                    "timestamp": "12 May 2023"
+                },
+                {
+                    "messageId": "59078854-0f4f-4f88-983c-2a1864c8e5f6",
+                    "senderId": "1234",
+                    "receiverId": "9012",
+                    "content": "I'm doing well too. Just working on a new project.",
+                    "timestamp": "12 May 2023"
+                },
+                {
+                    "messageId": "1a2d6c03-446d-432d-934b-4eae7d918ee2",
+                    "senderId": "9012",
+                    "receiverId": "1234",
+                    "content": "That sounds interesting! What kind of project is it?",
+                    "timestamp": "12 May 2023"
+                },
+                {
+                    "messageId": "320ca62b-b22e-4c11-a75a-155f9a8e8f37",
+                    "senderId": "1234",
+                    "receiverId": "9012",
+                    "content": "It's a web application for managing customer data. How about you? Any new projects on your end?",
+                    "timestamp": "12 May 2023"
+                }
+            ]
+        },
+        {
+            "chatId": "5fd5e54a-062d-4e8d-a006-29b5f123d7ed",
+            "participants": [
+                "1234",
+                "3456"
+            ],
+            "messages": [
+                {
+                    "messageId": "aae2836b-eb11-4ef7-8f43-4b6ffeb4f3d7",
+                    "senderId": "1234",
+                    "receiverId": "3456",
+                    "content": "Hey, how have you been?",
+                    "timestamp": "12 May 2023"
+                },
+                {
+                    "messageId": "c3a7d0b1-00b1-4f42-a5bc-91a0977406cd",
+                    "senderId": "3456",
+                    "receiverId": "1234",
+                    "content": "Hi! I've been good. Busy with work, but it's going well. How about you?",
+                    "timestamp": "12 May 2023"
+                },
+                {
+                    "messageId": "7e8b9a07-28ce-4a72-8e7a-ae7dc0898e9a",
+                    "senderId": "1234",
+                    "receiverId": "3456",
+                    "content": "I'm doing well too. Just finished a project and taking a break now.",
+                    "timestamp": "12 May 2023"
+                },
+                {
+                    "messageId": "f6eddc65-0e3a-49c1-899f-726baae97ae4",
+                    "senderId": "3456",
+                    "receiverId": "1234",
+                    "content": "That's great! What type of project did you work on?",
+                    "timestamp": "12 May 2023"
+                },
+                {
+                    "messageId": "d9973654-65e1-4f47-bb89-5a7ef824a1fe",
+                    "senderId": "1234",
+                    "receiverId": "3456",
+                    "content": "It was a mobile app for managing personal finances. How about you? Anything exciting happening at your end?",
+                    "timestamp": "12 May 2023"
+                }
+            ]
+        },
+        {
+            "chatId": "1d4a2ad7-51f9-4327-9b99-84e41de84d27",
+            "participants": [
+                "1234",
+                "7890"
+            ],
+            "messages": [
+                {
+                    "messageId": "3f57f7d9-742d-42e2-93b3-3b0631f7f2cd",
+                    "senderId": "1234",
+                    "receiverId": "7890",
+                    "content": "Hey, long time no see! How have you been?",
+                    "timestamp": "12 May 2023"
+                },
+                {
+                    "messageId": "92bbd13a-3e8f-4641-a91d-28fd3b4d4974",
+                    "senderId": "7890",
+                    "receiverId": "1234",
+                    "content": "Hi! I've been good. Busy with work, but everything's going well. How about you?",
+                    "timestamp": "12 May 2023"
+                }
+            ]
+        }
+    ]
+}

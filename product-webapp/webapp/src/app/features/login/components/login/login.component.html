@@ -1,0 +1,103 @@
+<div class="login">
+
+    <section class="login__card">
+
+        <div>
+
+            <img
+                class="logo"
+                src="../../../../../assets/logo.svg"
+                alt="logo"
+                routerLink="/"
+            />
+
+            <p class="card__title">
+                welcome <br/> back
+            </p>
+            
+            <p class="card__footer">
+                Don't have an account? <br/>
+                <a routerLink="/register">
+                    Sign up
+                    <mat-icon>exit_to_app</mat-icon>
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="login__form">
+
+        <div class="form__header">
+            Welcome back.
+            <p>Let's sign you in.</p>
+        </div>
+
+        <form #form="ngForm">
+
+            <mat-form-field appearance="outline">
+            
+                <mat-label>Email</mat-label>
+
+                <input type="email" matInput name="email" [(ngModel)]="user.email" #email="ngModel" required
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                
+                <mat-error *ngIf="(email.touched || email.dirty) && email.errors?.required">
+                    Email is required
+                </mat-error>
+
+                <mat-error *ngIf="(email.touched || email.dirty) && email.errors?.pattern">
+                    Please enter a valid email address
+                </mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+            
+                <mat-label>Password</mat-label>
+
+                <input type="password" matInput name="password" [(ngModel)]="user.password" #password="ngModel" 
+                required pattern="^(?=.*\d).{8,}$">
+                
+                <mat-error *ngIf="(password.touched || password.dirty) && password.errors?.required">
+                    Password is required
+                </mat-error>
+
+                <mat-error *ngIf="(password.touched || password.dirty) && password.errors?.pattern">
+                    Please enter a valid Password
+                </mat-error>
+
+            </mat-form-field>
+
+            <button 
+                class="loginBtn"
+                type="submit" 
+                (click)="login()"
+            >
+                Log in
+            </button>
+
+        </form>
+
+        <p class="form__gap">or log in using</p>
+
+        <button class="googleBtn">
+        
+            <img src="../../../../../assets/google.svg" alt="google icon"/>
+
+            <span>Google</span>
+        
+        </button>
+
+        <div class="form__footer">
+            Don't have an account? <br/>
+            <a routerLink="/register">
+                Sign up
+                <mat-icon>exit_to_app</mat-icon>
+            </a>
+        </div>
+
+    </section>
+
+</div>

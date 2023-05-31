@@ -1,0 +1,172 @@
+<div class="register">
+
+    <section class="register__card">
+
+        <div>
+            <img
+                class="logo"
+                src="../../../../../assets/logo.svg"
+                alt="logo"
+                routerLink="/"
+            />
+
+            <p class="card__title">
+                A few steps away <br/> from selling your <br/> used items
+            </p>
+            
+            <!-- <div class="card__img">
+            
+                <img
+                    src="../../../../../assets/exchange.png"
+                    alt="exchange image"
+                />
+                
+                <p>
+                    Exchange <br/>
+                    Purchase <br/>
+                    Sell <br/>
+                </p>
+            
+            </div> -->
+
+            <p class="card__footer">
+                Already has an account? <br/>
+                <a routerLink="/login">
+                    Log in
+                    <mat-icon>lock_open</mat-icon>
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="register__form">
+
+        <div class="form__header">
+            <p>Create Account</p>
+        </div>
+
+        
+        <form #form="ngForm">
+
+            <div class="form__small">
+                <mat-form-field appearance="outline">
+                
+                    <mat-label>First Name</mat-label>
+
+                    <input type="text" matInput name="firstName" [(ngModel)]="user.firstName" #firstName="ngModel" 
+                    required>
+                    
+                    <mat-error *ngIf="(firstName.touched || firstName.dirty) && firstName.errors?.required">
+                        First Name is required
+                    </mat-error>
+
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                
+                    <mat-label>Last Name</mat-label>
+
+                    <input type="text" matInput name="lastName" [(ngModel)]="user.lastName" #lastName="ngModel" 
+                    required>
+                    
+                    <mat-error *ngIf="(lastName.touched || lastName.dirty) && lastName.errors?.required">
+                        Last Name is required
+                    </mat-error>
+
+                </mat-form-field>
+            </div>
+
+            <mat-form-field appearance="outline">
+            
+                <mat-label>Email</mat-label>
+
+                <input type="email" matInput name="email" [(ngModel)]="user.email" #email="ngModel" required
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                
+                <mat-error *ngIf="(email.touched || email.dirty) && email.errors?.required">
+                    Email is required
+                </mat-error>
+
+                <mat-error *ngIf="(email.touched || email.dirty) && email.errors?.pattern">
+                    Please enter a valid email address
+                </mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+            
+                <mat-label>Password</mat-label>
+
+                <input type="password" matInput name="password" [(ngModel)]="user.password" #password="ngModel" 
+                required pattern="^(?=.*\d).{8,}$">
+                
+                <mat-error *ngIf="(password.touched || password.dirty) && password.errors?.required">
+                    Password is required
+                </mat-error>
+
+                <mat-error *ngIf="(password.touched || password.dirty) && password.errors?.pattern">
+                    Please enter a valid Password
+                </mat-error>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+            
+                <mat-label>Confirm Password</mat-label>
+
+                <input (input)="checkPassword()" type="password" matInput name="confirmPassword" [(ngModel)]="user.confirmPassword" 
+                #confirmPassword="ngModel" required>
+
+                <mat-error *ngIf="confirmPassword.errors?.isPasswordDiff">
+                    Both passwords should match.
+                </mat-error>
+
+                <mat-error *ngIf="confirmPassword.touched && confirmPassword.errors?.required">
+                    Confirm your password.
+                </mat-error>
+
+            </mat-form-field>
+
+            <!-- <div class="form__msg">
+                <mat-checkbox>
+                    By continuing, you agree to SwapSell's Conditions of Use and Privacy Policy.
+                </mat-checkbox>
+            </div> -->
+
+            <div class="form__msg">
+                By continuing, you agree to SwapSell's Conditions of Use and Privacy Policy.
+            </div>
+
+            <button 
+                class="submitBtn"
+                type="submit" 
+                (click)="register()"
+            >
+                Sign Up
+            </button>
+
+        </form>
+
+        <p class="form__gap">or sign up using</p>
+
+        <button class="googleBtn">
+        
+            <img src="../../../../../assets/google.svg" alt="google icon"/>
+
+            <span>Google</span>
+        
+        </button>
+
+        <p class="form__footer">
+            Already has an account? <br/>
+            <a routerLink="/login">
+                Log in
+                <mat-icon>lock_open</mat-icon>
+            </a>
+        </p>
+
+    </section>
+
+</div>

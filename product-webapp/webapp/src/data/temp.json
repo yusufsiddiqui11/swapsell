@@ -1,0 +1,125 @@
+{
+    "data": [
+        {
+            "name": "Dell",
+            "title": "Dell XPS 15",
+            "description": "Experience unmatched performance and stunning visuals with the Dell XPS 15. This high-end laptop is designed for productivity and entertainment. It features a sleek design, a vibrant display, and powerful hardware. Whether you're a creative professional or a gaming enthusiast, the Dell XPS 15 delivers exceptional speed and reliability. Get ready to elevate your computing experience with this cutting-edge machine.",
+            "image": "dell-xps-15",
+            "price": 95000,
+            "category": "Electronics",
+            "condition": "Good",
+            "ageInDays": 180,
+            "email": "mob100@example.com"
+        },
+        {
+            "name": "LG",
+            "title": "LG OLED TV",
+            "description": "Immerse yourself in stunning visuals with the LG OLED TV. This ultra-thin television offers vibrant colors, deep blacks, and an incredible contrast ratio. With its sleek design and smart features, you can enjoy a wide range of streaming services and access your favorite content effortlessly. Whether you're watching movies, sports, or playing games, the LG OLED TV provides a truly immersive viewing experience.",
+            "image": "lg-oled-tv",
+            "price": 120000,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 90,
+            "email": "mob100@example.com"
+        },
+        {
+            "name": "City Apartments",
+            "title": "Luxurious Apartment in the Heart of the City",
+            "description": "Welcome to your dream home! This luxurious apartment is located in the heart of the city, offering convenience and elegance. With spacious rooms, modern amenities, and breathtaking views, this apartment provides a comfortable and stylish living experience. Enjoy access to a gym, swimming pool, and other facilities. Don't miss the opportunity to live in this prime location and experience urban living at its finest.",
+            "image": "city-apartment",
+            "price": 15000000,
+            "category": "Real Estate",
+            "condition": "Good",
+            "ageInDays": 730,
+            "email": "mob100@example.com"
+        },
+        {
+            "name": "OnePlus",
+            "title": "OnePlus 9 Pro",
+            "description": "Experience flagship-level performance and cutting-edge features with the OnePlus 9 Pro. This brand-new smartphone delivers a seamless user experience with its powerful processor and stunning display. Capture professional-grade photos with the Hasselblad camera system and enjoy fast charging capabilities. With its sleek design and premium build quality, the OnePlus 9 Pro is a perfect blend of style and performance.",
+            "image": "oneplus-9-pro",
+            "price": 64999,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 30,
+            "email": "mob100@example.com"
+        },
+        {
+            "name": "Apple",
+            "title": "iPhone 12 Pro",
+            "description": "Get your hands on the latest iPhone technology with the iPhone 12 Pro. This top-of-the-line smartphone offers an exceptional camera system, powerful performance, and a stunning Super Retina XDR display. With its sleek design and advanced features like 5G connectivity and Face ID, the iPhone 12 Pro is designed to elevate your mobile experience. Stay connected, capture memories, and enjoy all the features that make the iPhone a true flagship device.",
+            "image": "iphone-12-pro",
+            "price": 119900,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 60,
+            "email": "mob100@example.com"
+        },
+        {
+            "name": "Tesla",
+            "title": "2022 Tesla Model S",
+            "description": "Experience the future of electric cars with the 2022 Tesla Model S. This luxury sedan offers unparalleled performance, long-range capabilities, and advanced autopilot features. With its sleek design and cutting-edge technology, the Model S provides a thrilling driving experience while being environmentally friendly. Enjoy the convenience of over-the-air updates and a spacious interior. Don't miss the opportunity to own this revolutionary electric vehicle.",
+            "image": "tesla-model-s",
+            "price": 13000000,
+            "category": "Automotive",
+            "condition": "New",
+            "ageInDays": 90,
+            "email": "mob100@example.com"
+        },
+        {
+            "name": "Audi",
+            "title": "2020 Audi A4",
+            "description": "Experience luxury and performance with the 2020 Audi A4. This elegant sedan combines style, comfort, and advanced technology. With its powerful engine and smooth handling, the Audi A4 delivers an exhilarating driving experience. The spacious interior, premium features, and attention to detail make it a perfect choice for those seeking refinement. Don't miss out on owning this exceptional car.",
+            "image": "audi-a4",
+            "price": 5000000,
+            "category": "Automotive",
+            "condition": "Used",
+            "ageInDays": 180,
+            "email": "ash@example.com"
+        },
+        {
+            "name": "Samsung",
+            "title": "Samsung Galaxy Note 20 Ultra",
+            "description": "Unleash your productivity and creativity with the Samsung Galaxy Note 20 Ultra. This flagship smartphone offers a stunning display, powerful performance, and an advanced S Pen for enhanced productivity. Capture stunning photos and videos with its pro-grade camera system. With its sleek design and premium build quality, the Galaxy Note 20 Ultra is a perfect companion for both work and play.",
+            "image": "samsung-galaxy-note-20-ultra",
+            "price": 89999,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 60,
+            "email": "ash@example.com"
+        },
+        {
+            "name": "Apple",
+            "title": "iPhone SE (2020)",
+            "description": "Experience the power of Apple in a compact size with the iPhone SE (2020). This smartphone combines the latest technology with a classic design. Enjoy the performance of the A13 Bionic chip, capture stunning photos with the advanced camera system, and enjoy the convenience of Touch ID. With its affordable price point and powerful features, the iPhone SE (2020) is a great choice for Apple enthusiasts.",
+            "image": "iphone-se-2020",
+            "price": 39999,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 90,
+            "email": "ash@example.com"
+        },
+        {
+            "name": "Apple",
+            "title": "MacBook Air (2020)",
+            "description": "Experience the ultimate portability and performance with the MacBook Air (2020). This lightweight and sleek laptop features Apple's M1 chip for blazing-fast speed and efficiency. With a stunning Retina display, Magic Keyboard, and all-day battery life, the MacBook Air is perfect for work, creativity, and entertainment. Whether you're a student or a professional, this laptop will elevate your productivity and take your computing experience to new heights.",
+            "image": "macbook-air-2020",
+            "price": 89999,
+            "category": "Electronics",
+            "condition": "New",
+            "ageInDays": 120,
+            "email": "ash@example.com"
+        },
+        {
+            "name": "Apple",
+            "title": "iPad (5th Generation)",
+            "description": "Enjoy the versatility and power of the iPad (5th Generation). With its stunning Retina display, A9 chip, and all-day battery life, this iPad offers a seamless user experience. Whether you're browsing the web, playing games, or using productivity apps, the iPad delivers smooth performance and immersive visuals. Stay connected, capture memories, and explore a world of possibilities with the iPad (5th Generation).",
+            "image": "ipad-5th-gen",
+            "price": 29999,
+            "category": "Electronics",
+            "condition": "Used",
+            "ageInDays": 365,
+            "email": "ash@example.com"
+        }
+    ]
+}

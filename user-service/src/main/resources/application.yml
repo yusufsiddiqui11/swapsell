@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: userServiceApp
+  data:
+    mongodb:
+      uri: mongodb://mongodb:27017
+      database: SwapSellUser
+  rabbitmq:
+    host: rabbitmq
+server:
+  port: 8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
